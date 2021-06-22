@@ -1,0 +1,14 @@
+<div class="formContainer">
+  <form class="formBox" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    Username:
+    <br />
+    <input class="form-control" type="text" placeholder="Username" formControlName="username"/>
+    <br/>
+    Password:
+    <br />
+    <input class="form-control" type="password" placeholder="Password" formControlName="password" />
+    <br />
+    <button class="formButton" type="submit">Register</button>
+    <button class="formButton" routerLinkActive="active" routerLink="/login">Back</button>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <br />
+    <br />
+  <form class="formBox" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    Username:
+    <br />
+    <input class="form-control" type="text" placeholder="Username" formControlName="username" />
+    <br />
+    Password:
+    <br />
+    <input class="form-control" type="text" placeholder="Password" formControlName="password" />
+    <input type="submit" class="fadeIn fourth" value="Log In">
+  </form>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="wrapper fadeInDown">
+
+  <div id="formContent">
+<div class="menuBar">
+  <a class="menuItem" href="logout">Logout</a>
+</div>
+<div style="text-align: center;">
+<table class="gameTable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Publisher</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let game of games">
+    <td>{{game._id}}</td>
+    <td>{{game.name}}</td>
+    <td>{{game.quantity}}</td>
+    <td>{{game.publisher}}</td>
+    <td>
+      <button (click)="deleteGame(game)" class="deleteBtn">Delete</button>
+    </td>
+  </tr>
+</table>
+<button routerLinkActive="active" class="btn" routerLink="/add-game">Add new game</button>
+<button class="btn" routerLink="/login">Back</button>
+</div>
+</div>
+</div>

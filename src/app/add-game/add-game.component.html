@@ -1,0 +1,20 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="menuBar">
+  <a class="menuItem" href="list-game">List Games</a>
+  <br>
+  <a class="menuItem" href="logout">Logout</a>
+</div>
+<div>
+  <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+    Game name: <input type="text" placeholder="GameName" formControlName="name" />
+    <br />
+    Quantity: <input type="number" placeholder="Quantity" formControlName="quantity" />
+    <br />
+    Publisher: <input type="text" placeholder="Publisher" formControlName ="publisher" />
+    <button class="btn" type="submit">Add new game!</button>
+    <button class="btn" routerLinkActive="active" routerLink="/list-game">Back to the list</button>
+  </form>
+</div>
+</div>
+</div>
